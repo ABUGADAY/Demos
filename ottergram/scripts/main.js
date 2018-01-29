@@ -1,10 +1,10 @@
-var DETAIL_IMAGE_SELECTOR = '[data-image-role="targer"]';
-var DETAIL_TITLE_SELECTOR = '[data-image-role="title"]';
-var DETAIL_FRAME_SELECTOR = '[data-image-role="frame"]';
-var THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
-var HIDDEN_DETAIL_CLASS = 'hidden-detail';
-var TINY_EFFECT_CLASS = 'is-tiny';
-var ESC_KEY = 27;
+const DETAIL_IMAGE_SELECTOR = '[data-image-role="targer"]';
+const DETAIL_TITLE_SELECTOR = '[data-image-role="title"]';
+const DETAIL_FRAME_SELECTOR = '[data-image-role="frame"]';
+const THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
+const HIDDEN_DETAIL_CLASS = 'hidden-detail';
+const TINY_EFFECT_CLASS = 'is-tiny';
+const ESC_KEY = 27;
 
 function setDetails(imageUrl, titleText) {
   'use strict';
