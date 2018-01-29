@@ -1,3 +1,4 @@
+//handler 处理器，一些处理校验的逻辑
 (function(window) {
   'use strict';
   var App = window.App || {};
@@ -34,21 +35,21 @@
       }.bind(this));
     });
   };
-  FormHandler.prototype.addSubmitHandler = function(fn) {
-    console.log('Setting submit handler for form');
-    this.$formElement.on('submit', function(event) {
-      event.preventDefault();
-      var data = {};
-      $(this).serializeArray().forEach(function(item) {
-        data[item.name] = item.value;
-        console.log(item.name + ' is ' + item.value);
-      });
-      console.log(data);
-      fn(data);
-      this.reset();
-      this.elements[0].focus();
-    });
-  };
+  // FormHandler.prototype.addSubmitHandler = function(fn) {
+  //   console.log('Setting submit handler for form');
+  //   this.$formElement.on('submit', function(event) {
+  //     event.preventDefault();
+  //     var data = {};
+  //     $(this).serializeArray().forEach(function(item) {
+  //       data[item.name] = item.value;
+  //       console.log(item.name + ' is ' + item.value);
+  //     });
+  //     console.log(data);
+  //     fn(data);
+  //     this.reset();
+  //     this.elements[0].focus();
+  //   });
+  // };
   FormHandler.prototype.addInputHandler = function(fn) {
     console.log('Setting input handler for form');
     this.$formElement.on('input', '[name="emailAddress"]', function(event) {

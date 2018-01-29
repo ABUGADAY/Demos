@@ -6,7 +6,8 @@
   function DataStore() {
     this.data = {};
   }
-
+/**
+* 采用Promise解耦模块 参见[Promise链](http://es6.ruanyifeng.com/#docs/promise)*/
   function promiseResolvedWith(value) {
     var promise = new Promise(function(resolve, reject) {
       resolve(value);

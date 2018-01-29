@@ -12,7 +12,7 @@
   var CheckList = App.CheckList;
   var remoteDS = new RemoteDataStore(SERVER_URL);
   var Validation = App.Validation;
-  var myTruck = new Truck('ncc-1701', remoteDS);
+  var myTruck = new Truck('ncc-1701', remoteDS);// || remoteDS 远程数据库
   window.myTruck = myTruck;
   var checkList = new CheckList(CHECKLIST_SELECTOR);
   checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
